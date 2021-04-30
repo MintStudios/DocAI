@@ -29,5 +29,3 @@ def recognize():
     except sr.RequestError as e:
         print("Could not request results from Wit.ai service; {0}".format(e))
 
-
-recognize()

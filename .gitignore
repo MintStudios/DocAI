@@ -133,3 +133,6 @@ dmypy.json
 
 # Secrets
 apikeys.py
+
+# My sad vscode folder...
+.vscode/

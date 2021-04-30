@@ -1,5 +1,5 @@
 # DocAI
-A python documentation assistant for MLH Hack at Home II
+A documentation assistant for MLH Hack at Home II
 
 ### How to get it running:
 

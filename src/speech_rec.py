@@ -1,4 +1,6 @@
 import config
+import tts
+import searchdoc
 import parse
 import speech_recognition as sr
 
@@ -33,6 +35,14 @@ def background_listening(limit: int):
             config.current_line = r.recognize_wit(audio, key=WIT_AI_KEY)
             parse.parse()
             print("Doc thinks you said " + config.current_line)
+            if config.current_lang != "" and config.current_objective != "":
+                tts.text_to_speech(
+                    f"Pulling up {config.current_objective} in the {config.current_lang} documentation"
+                )
+                searchdoc.search()
+                config.current_objective = ""
+                config.current_lang = ""
+
         except sr.UnknownValueError:
             print("Doc could not understand audio")
         except sr.RequestError as e:

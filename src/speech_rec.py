@@ -1,3 +1,4 @@
+import config
 import speech_recognition as sr
 
 WIT_AI_KEY = ""
@@ -30,7 +31,8 @@ def recognize(microphone: sr.Microphone, recognizer: sr.Recognizer):
         audio = recognizer.listen(source)
 
     try:
-        print("Doc thinks you said " + recognizer.recognize_wit(audio, key=WIT_AI_KEY))
+        config.current_line = recognizer.recognize_wit(audio, key=WIT_AI_KEY)
+        print("Doc thinks you said " + config.current_line)
     except sr.UnknownValueError:
         print("Doc could not understand audio")
     except sr.RequestError as e:
@@ -47,13 +49,11 @@ def background_listening(limit: int):
     # Callback for background listening
     def callback(recognizer, audio):
         try:
-            print("Doc thinks you said " + r.recognize_wit(audio, key=WIT_AI_KEY))
+            config.current_line = r.recognize_wit(audio, key=WIT_AI_KEY)
+            print("Doc thinks you said " + config.current_line)
         except sr.UnknownValueError:
             print("Doc could not understand audio")
         except sr.RequestError as e:
             print("Could not request results from Doc service; {0}".format(e))
 
     stop_listening = r.listen_in_background(m, callback, phrase_time_limit=limit)
-
-    while True:
-        pass

@@ -9,15 +9,22 @@ try:
 except ModuleNotFoundError as e:
     print("Try inserting a wit.ai key.")
 
-
 m = sr.Microphone()
 r = sr.Recognizer()
 
 
-def recognize():
+def recognize(m, r):
     """
-    Tool for recognizing speech using Wit.ai. Needs a key.
+    Recognizes voice
+
+    Args:
+        m (Microphone): SpeechRecognition's Microphone class. Requires PyAudio.
+        r (Recognizer): SpeechRecognition's Recognizer class.
     """
+
+    with m as source:
+        r.adjust_for_ambient_noise(source)
+
     with sr.Microphone() as source:
         print("Say something!")
         audio = r.listen(source)
@@ -28,3 +35,25 @@ def recognize():
         print("Wit.ai could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Wit.ai service; {0}".format(e))
+
+
+def background_listening(limit: int):
+    """
+    Starts background listening.
+
+    Args:
+        limit (int): Limit for which the AI stops listening to parse information.
+    """
+    # Callback for background listening
+    def callback(recognizer, audio):
+        try:
+            print("Wit.ai thinks you said " + r.recognize_wit(audio, key=WIT_AI_KEY))
+        except sr.UnknownValueError:
+            print("Wit.ai could not understand audio")
+        except sr.RequestError as e:
+            print("Could not request results from Wit.ai service; {0}".format(e))
+
+    stop_listening = r.listen_in_background(m, callback, phrase_time_limit=limit)
+
+    while True:
+        pass

@@ -136,3 +136,4 @@ apikeys.py
 
 # My sad vscode folder...
 .vscode/
+.DS_Store

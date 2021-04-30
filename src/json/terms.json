@@ -1,19 +1,23 @@
 {
     "class": [
-        "class"
+        "class",
+        "classes"
     ],
     "integer": [
         "int",
         "hint",
+        "integers",
         "integer"
     ],
     "string": [
-        "string"
+        "string",
+        "strings"
     ],
     "boolean": [
         "bool",
         "boolean",
-        "pool"
+        "pool",
+        "bools"
     ],
     "float": [
         "float",
@@ -37,8 +41,7 @@
         "list"
     ],
     "for loop": [
-        "for loop",
-        "for"
+        "for loop"
     ],
     "while loop": [
         "while loop",

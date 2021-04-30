@@ -15,29 +15,9 @@ m = sr.Microphone()
 r = sr.Recognizer()
 
 
-def recognize(microphone: sr.Microphone, recognizer: sr.Recognizer):
-    """
-    Recognizes voice
-
-    Args:
-        m (Microphone): SpeechRecognition's Microphone class. Requires PyAudio.
-        r (Recognizer): SpeechRecognition's Recognizer class.
-    """
-
-    with microphone as source:
-        recognizer.adjust_for_ambient_noise(source)
-
-    with microphone as source:
-        print("Say something!")
-        audio = recognizer.listen(source)
-
-    try:
-        config.current_line = recognizer.recognize_wit(audio, key=WIT_AI_KEY)
-        print("Doc thinks you said " + config.current_line)
-    except sr.UnknownValueError:
-        print("Doc could not understand audio")
-    except sr.RequestError as e:
-        print("Could not request results from Doc service; {0}".format(e))
+def adjust_mic():
+    with m as source:
+        r.adjust_for_ambient_noise(source)
 
 
 def background_listening(limit: int):

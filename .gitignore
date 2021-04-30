@@ -130,3 +130,6 @@ dmypy.json
 
 #deepsource
 .deepsource.toml
+
+# Secrets
+apikeys.py

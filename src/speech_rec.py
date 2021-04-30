@@ -13,7 +13,7 @@ m = sr.Microphone()
 r = sr.Recognizer()
 
 
-def recognize(m, r):
+def recognize(microphone: sr.Microphone, recognizer: sr.Recognizer):
     """
     Recognizes voice
 
@@ -22,19 +22,19 @@ def recognize(m, r):
         r (Recognizer): SpeechRecognition's Recognizer class.
     """
 
-    with m as source:
-        r.adjust_for_ambient_noise(source)
+    with microphone as source:
+        recognizer.adjust_for_ambient_noise(source)
 
-    with sr.Microphone() as source:
+    with microphone as source:
         print("Say something!")
-        audio = r.listen(source)
+        audio = recognizer.listen(source)
 
     try:
-        print("Wit.ai thinks you said " + r.recognize_wit(audio, key=WIT_AI_KEY))
+        print("Doc thinks you said " + recognizer.recognize_wit(audio, key=WIT_AI_KEY))
     except sr.UnknownValueError:
-        print("Wit.ai could not understand audio")
+        print("Doc could not understand audio")
     except sr.RequestError as e:
-        print("Could not request results from Wit.ai service; {0}".format(e))
+        print("Could not request results from Doc service; {0}".format(e))
 
 
 def background_listening(limit: int):
@@ -47,11 +47,11 @@ def background_listening(limit: int):
     # Callback for background listening
     def callback(recognizer, audio):
         try:
-            print("Wit.ai thinks you said " + r.recognize_wit(audio, key=WIT_AI_KEY))
+            print("Doc thinks you said " + r.recognize_wit(audio, key=WIT_AI_KEY))
         except sr.UnknownValueError:
-            print("Wit.ai could not understand audio")
+            print("Doc could not understand audio")
         except sr.RequestError as e:
-            print("Could not request results from Wit.ai service; {0}".format(e))
+            print("Could not request results from Doc service; {0}".format(e))
 
     stop_listening = r.listen_in_background(m, callback, phrase_time_limit=limit)
 

@@ -1,0 +1,47 @@
+{
+    "class": [
+        "class"
+    ],
+    "integer": [
+        "int",
+        "hint",
+        "integer"
+    ],
+    "string": [
+        "string"
+    ],
+    "boolean": [
+        "bool",
+        "boolean",
+        "pool"
+    ],
+    "float": [
+        "float",
+        "floating point"
+    ],
+    "double": [
+        "double"
+    ],
+    "object": [
+        "object"
+    ],
+    "if statements": [
+        "if",
+        "else",
+        "if statement"
+    ],
+    "array": [
+        "array"
+    ],
+    "list": [
+        "list"
+    ],
+    "for loop": [
+        "for loop",
+        "for"
+    ],
+    "while loop": [
+        "while loop",
+        "while"
+    ]
+}

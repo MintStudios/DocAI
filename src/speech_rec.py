@@ -1,4 +1,5 @@
 import config
+import parse
 import speech_recognition as sr
 
 WIT_AI_KEY = ""
@@ -50,6 +51,7 @@ def background_listening(limit: int):
     def callback(recognizer, audio):
         try:
             config.current_line = r.recognize_wit(audio, key=WIT_AI_KEY)
+            parse.parse()
             print("Doc thinks you said " + config.current_line)
         except sr.UnknownValueError:
             print("Doc could not understand audio")

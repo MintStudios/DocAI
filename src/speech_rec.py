@@ -17,7 +17,7 @@ r = sr.Recognizer()
 def recognize():
     """
     Tool for recognizing speech using Wit.ai. Needs a key.
-    """    
+    """
     with sr.Microphone() as source:
         print("Say something!")
         audio = r.listen(source)
@@ -28,4 +28,3 @@ def recognize():
         print("Wit.ai could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Wit.ai service; {0}".format(e))
-

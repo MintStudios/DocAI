@@ -11,6 +11,8 @@ try:
     import apikeys
 
     WIT_AI_KEY = apikeys.WIT_AI_KEY
+except:
+    pass
 
 m = sr.Microphone()
 r = sr.Recognizer()

@@ -1,5 +1,8 @@
-# DocAI
-A documentation assistant for MLH Hack at Home II
+<h1 align="center">DocAI</h1>
+<h3 align="center">A documentation assistant for MLH Hack at Home II</h3>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/54677274/116788609-92c34400-aa78-11eb-93e3-e49d4aae68f4.png" alt="drawing" align="center" width="200" height="200"/>
+</p>
 
 ### How to get it running:
 

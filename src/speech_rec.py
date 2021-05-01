@@ -31,14 +31,13 @@ def recognize():
     config.current_line = ""
     with sr.Microphone() as source:
         print("Say something!")
+        tts.text_to_speech("Doc here!")
         audio = r.listen(source, phrase_time_limit=7)
-        print("listening")
 
     try:
-        print("trying")
         config.current_line = r.recognize_wit(audio, key=WIT_AI_KEY)
         parse.parse()
-        print("Doc thinks you said " + config.current_line)
+        print("I thinks you said " + config.current_line)
         if config.current_lang != "" and config.current_objective != "":
 
             tts.text_to_speech(
@@ -67,8 +66,8 @@ def background_listening(limit: int):
             for pronunciation in doc_pronunciations:
                 if pronunciation in config.current_line:
                     config.is_active = True
-                    print("Hi! -  " + config.current_line)
-                    tts.text_to_speech("Doc here!")
+                    print("I think you said: " + config.current_line)
+
                     stop(stop_listening)
                     break
         except sr.UnknownValueError:
@@ -80,5 +79,4 @@ def background_listening(limit: int):
 
 
 def stop(listener):
-    print("stopping")
     listener(wait_for_stop=False)

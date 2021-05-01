@@ -26,7 +26,7 @@ Doc: `Doc here!`
 
 Say: `Search up the python documentation for boolean.`
 
-Doc: `Pulling up boolean in the python documentation."`
+Doc: `Pulling up boolean in the python documentation.`
 
 ### Troubleshooting
 #### Doc doesn't understand me. What should I do?
@@ -34,3 +34,6 @@ Make sure you're pronunciating the language and the term you want to look up cor
 
 #### This term isn't on Doc's vocabulary list. What should I do?
 You can contribute and add your own terms! Visit /src/terms.json and see how I've listed the terms with possible pronunciations.
+
+#### My favourite language isn't on here. How could you...?
+Well, there are about 700 programming languages (according to Wikipedia) and I can't include them all. I've put down some of them. Create a github issue with the name of the programming language and I'll add it to the list.

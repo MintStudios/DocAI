@@ -15,6 +15,22 @@ Run the main file:
 
 `python3 src/main.py`
 
-You can try it out by saying:
+Now you're all set. Doc is semi-dormant at this time, and only activates when she hears her name. After that, she's at your service!
 
-`"Python documentation for booleans"`
+Example:
+(Assuming Doc is running)
+
+Say: `Hey Doc`
+
+Doc: `Doc here!`
+
+Say: `Search up the python documentation for boolean.`
+
+Doc: `Pulling up boolean in the python documentation."`
+
+### Troubleshooting
+#### Doc doesn't understand me. What should I do?
+Make sure you're pronunciating the language and the term you want to look up correctly. If that doesn't work, ambient noise might be the problem. Move to a quiet location.
+
+#### This term isn't on Doc's vocabulary list. What should I do?
+You can contribute and add your own terms! Visit /src/terms.json and see how I've listed the terms with possible pronunciations.

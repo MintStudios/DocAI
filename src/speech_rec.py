@@ -4,7 +4,8 @@ import searchdoc
 import parse
 import speech_recognition as sr
 
-WIT_AI_KEY = ""
+# This is the public Wit.ai key that I have created. Please change this for yourself.
+WIT_AI_KEY = "BPQFBEOLL4VLIPR2VRZ5BIDGEGXK6BR4"
 
 try:
     import apikeys

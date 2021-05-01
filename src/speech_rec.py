@@ -11,8 +11,6 @@ try:
     import apikeys
 
     WIT_AI_KEY = apikeys.WIT_AI_KEY
-except ModuleNotFoundError as e:
-    print("Try inserting a wit.ai key.")
 
 m = sr.Microphone()
 r = sr.Recognizer()

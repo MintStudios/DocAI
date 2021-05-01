@@ -11,7 +11,8 @@
     ],
     "string": [
         "string",
-        "strings"
+        "strings",
+        "stream"
     ],
     "boolean": [
         "bool",
@@ -41,10 +42,97 @@
         "list"
     ],
     "for loop": [
-        "for loop"
+        "for loop",
+        "four loop"
     ],
     "while loop": [
         "while loop",
         "while"
+    ],
+    "generic": [
+        "generics"
+    ],
+    "print": [
+        "print"
+    ],
+    "operators": [
+        "operator"
+    ],
+    "literals": [
+        "literal"
+    ],
+    "packages": [
+        "package"
+    ],
+    "coroutines": [
+        "routine"
+    ],
+    "bitwise": [
+        "bitwise"
+    ],
+    "error": [
+        "error"
+    ],
+    "try": [
+        "try"
+    ],
+    "compiler": [
+        "compile"
+    ],
+    "void": [
+        "void"
+    ],
+    "static": [
+        "static"
+    ],
+    "namespace": [
+        "name",
+        "space"
+    ],
+    "public": [
+        "public"
+    ],
+    "private": [
+        "private"
+    ],
+    "return": [
+        "return"
+    ],
+    "null": [
+        "null"
+    ],
+    "variables": [
+        "variable"
+    ],
+    "modulo": [
+        "modulo",
+        "modulus"
+    ],
+    "constant": [
+        "constant"
+    ],
+    "buffer": [
+        "buff"
+    ],
+    "json": [
+        "jason"
+    ],
+    "break": [
+        "break"
+    ],
+    "continue": [
+        "continue"
+    ],
+    "switch": [
+        "switch"
+    ],
+    "yield": [
+        "yield"
+    ],
+    "await": [
+        "wait"
+    ],
+    "arguments": [
+        "argument"
     ]
 }

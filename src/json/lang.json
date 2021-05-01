@@ -11,11 +11,15 @@
         "play sound",
         "pinson",
         "payton",
-        "payson"
+        "payson",
+        "put on",
+        "thon",
+        "poison"
     ],
     "c++": [
         "see plus plus",
-        "see pee pee"
+        "see pee pee",
+        "plus plus"
     ],
     "javascript": [
         "javascript",
@@ -26,6 +30,7 @@
         "jawa"
     ],
     "c sharp": [
-        "see sharp"
+        "see sharp",
+        "sharp"
     ]
 }

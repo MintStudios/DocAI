@@ -68,6 +68,7 @@ def background_listening(limit: int):
                 if pronunciation in config.current_line:
                     config.is_active = True
                     print("Hi! -  " + config.current_line)
+                    tts.text_to_speech("Doc here!")
                     stop(stop_listening)
                     break
         except sr.UnknownValueError:

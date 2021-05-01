@@ -3,7 +3,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/54677274/116788609-92c34400-aa78-11eb-93e3-e49d4aae68f4.png" alt="drawing" align="center" width="200" height="200"/>
 </p>
-
+(Source code is in the /src/ folder)
 ### How to get it running:
 
 First, clone the repository:

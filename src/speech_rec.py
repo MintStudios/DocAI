@@ -31,7 +31,6 @@ def recognize():
     config.current_line = ""
     with sr.Microphone() as source:
         print("Say something!")
-        tts.text_to_speech("Doc here!")
         audio = r.listen(source, phrase_time_limit=7)
 
     try:
@@ -67,7 +66,7 @@ def background_listening(limit: int):
                 if pronunciation in config.current_line:
                     config.is_active = True
                     print("I think you said: " + config.current_line)
-
+                    tts.text_to_speech("Doc here!")
                     stop(stop_listening)
                     break
         except sr.UnknownValueError:

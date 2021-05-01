@@ -38,7 +38,7 @@ def recognize():
         config.current_line = r.recognize_wit(audio, key=WIT_AI_KEY)
         parse.parse()
         print("I thinks you said " + config.current_line)
-        if config.current_lang != "" and config.current_objective != "":
+        if "" not in (config.current_lang, config.current_objective):
 
             tts.text_to_speech(
                 f"Pulling up {config.current_objective} in the {config.current_lang} documentation"

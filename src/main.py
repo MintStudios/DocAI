@@ -8,7 +8,7 @@ def main():
     while True:
         if not config.is_active and config.background_first_time:
             config.background_first_time = False
-            background_listening(5)
+            background_listening(3)
 
         if config.is_active:
             config.background_first_time = True

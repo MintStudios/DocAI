@@ -1,7 +1,7 @@
 <h1 align="center">DocAI</h1>
 <h3 align="center">A documentation assistant made for MLH Hack at Home II</h3>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/54677274/116788609-92c34400-aa78-11eb-93e3-e49d4aae68f4.png" alt="drawing" align="center" width="200" height="200"/>
+<img src="https://user-images.githubusercontent.com/54677274/116800274-abaa1480-aacd-11eb-92dc-6cee964ae4b7.png" alt="drawing" align="center" width="200" height="200"/>
 </p>
 (Source code is in the /src/ folder)
 ### How to get it running:
